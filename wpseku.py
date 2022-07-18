@@ -60,40 +60,40 @@ class WPSeku(object):
 		self.kwargs = kwargs
 
 	def Banner(self):
-		print self.r+r"__        ______  ____       _          "+self.e
-		print self.r+r"\ \      / /  _ \/ ___|  ___| | ___   _ "+self.e
-		print self.r+r" \ \ /\ / /| |_) \___ \ / _ \ |/ / | | |"+self.e
-		print self.r+r"  \ V  V / |  __/ ___) |  __/   <| |_| |"+self.e
-		print self.r+r"   \_/\_/  |_|   |____/ \___|_|\_\\__,_|"+self.e
-		print self.w+"                                         "+self.e
-		print self.w+"|| WPSeku - Wordpress Security Scanner   "+self.e
-		print self.w+"|| Version 0.2.1                         "+self.e
-		print self.w+"|| Momo Outaadi (M4ll0k)                 "+self.e
-		print self.w+"|| %shttps://github.com/m4ll0k/WPSeku%s\n"%(self.y,self.e)
+		print(self.r+r"__        ______  ____       _          "+self.e)
+		print(self.r+r"\ \      / /  _ \/ ___|  ___| | ___   _ "+self.e)
+		print(self.r+r" \ \ /\ / /| |_) \___ \ / _ \ |/ / | | |"+self.e)
+		print(self.r+r"  \ V  V / |  __/ ___) |  __/   <| |_| |"+self.e)
+		print(self.r+r"   \_/\_/  |_|   |____/ \___|_|\_\\__,_|"+self.e)
+		print(self.w+"                                         "+self.e)
+		print(self.w+"|| WPSeku - Wordpress Security Scanner   "+self.e)
+		print(self.w+"|| Version 0.2.1                         "+self.e)
+		print(self.w+"|| Momo Outaadi (M4ll0k)                 "+self.e)
+		print(self.w+"|| %shttps://github.com/m4ll0k/WPSeku%s\n"%(self.y,self.e)
 
 	def Usage(self,ext=False):
 		path = os.path.basename(sys.argv[0])
 		self.Banner()
-		print "Usage: ./%s [--target|-t] http://localhost\n"%path
-		print "\t-t --target\tTarget URL (eg: http://localhost)"
-		print "\t-x --xss\tTesting XSS vulns"
-		print "\t-s --sql\tTesting SQL vulns"
-		print "\t-l --lfi\tTesting LFI vulns"
-		print "\t-q --query\tTestable parameters (eg: \"id=1&test=1\")"
-		print "\t-b --brute\tBruteforce login via xmlrpc"
-		print "\t-u --user\tSet username, default=admin"
-		print "\t-p --proxy\tSet proxy, (host:port)"
-		print "\t-m --method\tSet method (GET/POST)"
-		print "\t-c --cookie\tSet cookies"
-		print "\t-w --wordlist\tSet wordlist"
-		print "\t-a --agent\tSet user-agent"
-		print "\t-r --redirect\tRedirect target url, default=True"
-		print "\t-h --help\tShow this help and exit\n"
-		print "Examples:"
-		print "\t%s --target http://localhost"%path
-		print "\t%s -t http://localhost/wp-admin/post.php -m GET -q \"post=49&action=edit\" [-x,-s,-l]"%path
-		print "\t%s --target http://localhost --brute --wordlist dict.txt"%path
-		print "\t%s --target http://localhost --brute --user test --wordlist dict.txt\n"%path
+		print("Usage: ./%s [--target|-t] http://localhost\n"%path)
+		print("\t-t --target\tTarget URL (eg: http://localhost)"
+		print("\t-x --xss\tTesting XSS vulns")
+		print("\t-s --sql\tTesting SQL vulns")
+		print("\t-l --lfi\tTesting LFI vulns")
+		print("\t-q --query\tTestable parameters (eg: \"id=1&test=1\")")
+		print("\t-b --brute\tBruteforce login via xmlrpc")
+		print("\t-u --user\tSet username, default=admin")
+		print("\t-p --proxy\tSet proxy, (host:port)")
+		print("\t-m --method\tSet method (GET/POST)")
+		print("\t-c --cookie\tSet cookies")
+		print("\t-w --wordlist\tSet wordlist")
+		print("\t-a --agent\tSet user-agent")
+		print("\t-r --redirect\tRedirect target url, default=True")
+		print("\t-h --help\tShow this help and exit\n")
+		print("Examples:")
+		print("\t%s --target http://localhost"%path)
+		print("\t%s -t http://localhost/wp-admin/post.php -m GET -q \"post=49&action=edit\" [-x,-s,-l]"%path)
+		print("\t%s --target http://localhost --brute --wordlist dict.txt"%path)
+		print("\t%s --target http://localhost --brute --user test --wordlist dict.txt\n"%path)
 		if ext == True:
 			sys.exit()
 
